@@ -1,7 +1,8 @@
 import * as React from 'react';
+import AppHeader from '@/components/header/app.header';
 
 export default function HomePage() {
   return (
-    <div> HEllo word</div>
+    <div>Home Page</div>
   );
 }
