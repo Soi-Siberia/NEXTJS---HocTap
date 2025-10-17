@@ -1,7 +1,7 @@
 import * as React from 'react';
 import ThemeRegistry from '@/components/theme-registry/theme.registry';
 import AppHeader from '@/components/header/app.header';
-import MainSlider from '@/components/main/main.slider';
+import FooterPage from '@/components/footer/app.footer';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,9 +9,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <ThemeRegistry>
           <AppHeader />
-          <MainSlider />
-
           {children}
+          <FooterPage />
         </ThemeRegistry>
       </body>
     </html>

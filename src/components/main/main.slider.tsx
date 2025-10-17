@@ -108,54 +108,6 @@ const MainSlider = () => {
                 </div>
             </Box>
 
-            {/* ----------------------------- */}
-
-            <Box sx={{
-                margin: "0 50px",
-                borderBottom: "1px solid #ccc",
-                ".slide-item": {
-                    padding: " 0 10px",
-                },
-                "h3": {
-                    border: "1px solid #ccc",
-                    height: "200px",
-                    padding: "20px",
-                }
-            }}>
-                <div className="slider-container">
-                    <h2>Mutiple Track</h2>
-                    <Slider {...settings}>
-                        <div className="slide-item">
-                            <h3>1</h3>
-                        </div>
-                        <div className="slide-item">
-                            <h3>2</h3>
-                        </div>
-                        <div className="slide-item">
-                            <h3>3</h3>
-                        </div>
-                        <div className="slide-item">
-                            <h3>4</h3>
-                        </div>
-                        <div className="slide-item">
-                            <h3>5</h3>
-                        </div>
-                        <div className="slide-item">
-                            <h3>6</h3>
-                        </div>
-                        <div className="slide-item">
-                            <h3>7</h3>
-                        </div>
-                        <div className="slide-item">
-                            <h3>8</h3>
-                        </div>
-                        <div className="slide-item">
-                            <h3>9</h3>
-                        </div>
-                    </Slider>
-                </div>
-            </Box>
-
 
         </Container>
     )

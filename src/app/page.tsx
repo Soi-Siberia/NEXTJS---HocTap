@@ -1,8 +1,28 @@
 import * as React from 'react';
-import AppHeader from '@/components/header/app.header';
+import MainSlider from '@/components/main/main.slider';
+import { sendRequestJS } from '@/utils/wrapper.api';
 
-export default function HomePage() {
+export default async function HomePage() {
+
+  const res = await sendRequestJS({
+    url: 'http://localhost:3000/tracks/top',
+    method: 'POST',
+    queryParams: {
+      limit: 1,
+      genre: "CHILL"
+    }
+  })
+
+  console.log('Response from API:', res);
+
   return (
-    <div>Home Page</div>
+    <>
+      <MainSlider />
+      <MainSlider />
+      <MainSlider />
+
+
+    </>
+
   );
 }
