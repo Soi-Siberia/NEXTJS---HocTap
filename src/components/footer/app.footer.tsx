@@ -9,7 +9,7 @@ const FooterPage = () => {
     const hasMounted = useHasMounted();
 
     if (!hasMounted) return (<></>)
-    console.log("===>", process.env.NEXT_PUBLIC_BACKEND_URL)
+    // console.log("===>", process.env.NEXT_PUBLIC_BACKEND_URL)
 
     return (
         <AppBar
@@ -23,10 +23,16 @@ const FooterPage = () => {
                     alignItems: "center",
                     justifyContent: "space-between",
 
+                    ".rhap_main.rhap_stacked": {
+                        flexDirection: "row",
+                        alignItems: "center",
+
+                    },
                     ".audio": {
                         width: "70%",
                         marginRight: "20px",
-                    }
+                    },
+
                 }}>
                     <div className='audio'>
                         <AudioPlayer
@@ -56,7 +62,7 @@ const FooterPage = () => {
                 </Box>
             </Container>
 
-        </AppBar>
+        </AppBar >
 
 
 

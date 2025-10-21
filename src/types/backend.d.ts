@@ -11,6 +11,8 @@ declare global {
         "url": string,
         "public_id": string,
         "genre": string,
+        "imgUrl": string,
+        "imgPublicId": string,
     }
 
 

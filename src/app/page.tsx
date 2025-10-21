@@ -1,25 +1,42 @@
+
 import * as React from 'react';
 import MainSlider from '@/components/main/main.slider';
 import { sendRequest } from '@/utils/api.wrapper'
 export default async function HomePage() {
 
-  const res = await sendRequest<IBackendRes<ITrackTop>>({
+  const resNEW = await sendRequest<IBackendRes<ITrackTop[]>>({
     url: 'http://localhost:3000/tracks/top',
     method: 'POST',
     queryParams: {
-      limit: 1,
-      genre: "CHILL"
+      limit: 5,
+      genre: "NEW"
     }
 
   })
 
-  console.log('Response from API:', res);
+  const resChill = await sendRequest<IBackendRes<ITrackTop[]>>({
+    url: 'http://localhost:3000/tracks/top',
+    method: 'POST',
+    queryParams: {
+      limit: 5,
+      // genre: ""
+    }
+
+  })
+
+  // console.log('Response from API:', resNEW);
 
   return (
     <>
-      <MainSlider />
-      <MainSlider />
-      <MainSlider />
+      <MainSlider
+        data={resNEW?.data ?? []}
+      />
+      <MainSlider
+        data={resChill?.data ?? []}
+      />
+      <MainSlider
+        data={resNEW?.data ?? []}
+      />
 
 
     </>
